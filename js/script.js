@@ -76,8 +76,7 @@ $("#list").on('click', ".modify", function() {
       "text": aggiornamento
     },
    "success": function(data){
-     elemento.text(aggiornamento);
-     render(data);
+     elemento.text(data.text);
 
      },
    "error": function(){
