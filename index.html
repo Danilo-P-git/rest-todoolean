@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <h1>Todo list</h1>
+
+
+  <ul id="list"></ul>
+  <input id="input-object" type="text" placeholder="Aggiungi un nuovo elemento">
+  <button class="add-object" type="button" name="button">Aggiungi</button>
+    <script id="todo-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <li id="{{id}}" class="object">{{this.text}} <span class="delete">X</span></li>
+        {{/each}}
+      </script>
+
+      <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
