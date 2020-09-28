@@ -59,11 +59,31 @@ $(".add-object").click(function(){
      }
   );
   }
-
+  $("#input-object").val("");
 })
 
+// UPDATE
+$("#list").on('click', ".modify", function() {
+  var aggiornamento = prompt("modifica la lista")
+  var elemento = $(this).parent();
+  var id = elemento.attr("id");
+  $.ajax(
+   {
+   "url": "http://157.230.17.132:3028/todos/"+id,
+   "method": "PATCH",
+    "data": {
+      "text": aggiornamento
+    },
+   "success": function(data){
+     elemento.text(aggiornamento)
+     },
+   "error": function(){
+     }
+   }
+  );
 
-
+  $("#input-object").val("");
+});
 
 
 

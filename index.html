@@ -15,10 +15,11 @@
   <input id="input-object" type="text" placeholder="Aggiungi un nuovo elemento">
   <button class="add-object" type="button" name="button">Aggiungi</button>
 
+
   <!-- SE si usa each è come fare un for nella funzione render in js -->
     <script id="todo-template" type="text/x-handlebars-template">
         {{#each data}}
-        <li id="{{id}}" class="object">{{this.text}} <span class="delete">X</span></li>
+        <li id="{{id}}" class="object">{{this.text}} <span class="delete">X</span> <span class="modify"><i class="fas fa-edit"></i></span></li>
         {{/each}}
       </script>
 
