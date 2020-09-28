@@ -19,7 +19,7 @@
   <!-- SE si usa each è come fare un for nella funzione render in js -->
     <script id="todo-template" type="text/x-handlebars-template">
         {{#each data}}
-        <li id="{{id}}" class="object">{{this.text}} <span class="delete">X</span> <span class="modify"><i class="fas fa-edit"></i></span></li>
+        <li id="{{id}}" class="object"> <p class="testo">{{this.text}}</p> <span class="delete">X</span> <span class="modify"><i class="fas fa-edit"></i></span></li>
         {{/each}}
       </script>
 

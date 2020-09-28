@@ -64,9 +64,10 @@ $(".add-object").click(function(){
 
 // UPDATE
 $("#list").on('click', ".modify", function() {
+  var id = $(this).parent().attr("id");
+  console.log(id);
   var aggiornamento = prompt("modifica la lista")
-  var elemento = $(this).parent();
-  var id = elemento.attr("id");
+  var elemento = $(this).find(".testo");
   $.ajax(
    {
    "url": "http://157.230.17.132:3028/todos/"+id,
